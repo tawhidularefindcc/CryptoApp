@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2217581428CB80DB002828D9 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217581328CB80DB002828D9 /* CoinModel.swift */; };
+		2217581628CB8960002828D9 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217581528CB8960002828D9 /* CoinRowView.swift */; };
+		2217581828CB8A04002828D9 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217581728CB8A04002828D9 /* PreviewProvider.swift */; };
+		2217581A28CB932B002828D9 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2217581928CB932B002828D9 /* Double.swift */; };
 		2278E8CF28CB55A20051613E /* CryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278E8CE28CB55A20051613E /* CryptoAppApp.swift */; };
 		2278E8D128CB55A20051613E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2278E8D028CB55A20051613E /* ContentView.swift */; };
 		2278E8D328CB55A60051613E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2278E8D228CB55A60051613E /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		2217581328CB80DB002828D9 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		2217581528CB8960002828D9 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		2217581728CB8A04002828D9 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		2217581928CB932B002828D9 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		2278E8CB28CB55A20051613E /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2278E8CE28CB55A20051613E /* CryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppApp.swift; sourceTree = "<group>"; };
 		2278E8D028CB55A20051613E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,9 +75,9 @@
 		2278E8CD28CB55A20051613E /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
+				2278E8DC28CB5CB80051613E /* Extensions */,
 				2217581228CB80C4002828D9 /* Models */,
 				2278E8DF28CB5ED80051613E /* Core */,
-				2278E8DC28CB5CB80051613E /* Extensions */,
 				2278E8CE28CB55A20051613E /* CryptoAppApp.swift */,
 				2278E8D028CB55A20051613E /* ContentView.swift */,
 				2278E8D228CB55A60051613E /* Assets.xcassets */,
@@ -92,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				2278E8DD28CB5CCD0051613E /* Color.swift */,
+				2217581728CB8A04002828D9 /* PreviewProvider.swift */,
+				2217581928CB932B002828D9 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2278E8E328CB5F030051613E /* HomeView.swift */,
+				2217581528CB8960002828D9 /* CoinRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,12 +225,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2217581628CB8960002828D9 /* CoinRowView.swift in Sources */,
 				2278E8D128CB55A20051613E /* ContentView.swift in Sources */,
 				2278E8E428CB5F030051613E /* HomeView.swift in Sources */,
 				2278E8CF28CB55A20051613E /* CryptoAppApp.swift in Sources */,
 				2278E8E828CB61F60051613E /* CircleButtonView.swift in Sources */,
 				2278E8DE28CB5CCD0051613E /* Color.swift in Sources */,
 				2278E8EB28CB67F80051613E /* CircleButtonAnimationView.swift in Sources */,
+				2217581828CB8A04002828D9 /* PreviewProvider.swift in Sources */,
+				2217581A28CB932B002828D9 /* Double.swift in Sources */,
 				2217581428CB80DB002828D9 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
