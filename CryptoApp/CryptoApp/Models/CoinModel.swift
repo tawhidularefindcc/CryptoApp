@@ -7,22 +7,64 @@
 
 import Foundation
 
-//API info
+// CoinGecko API info
 /*
-   URL
- https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h
+ URL: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h
+ 
+ JSON Response:
+ {
+     "id": "bitcoin",
+     "symbol": "btc",
+     "name": "Bitcoin",
+     "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+     "current_price": 58908,
+     "market_cap": 1100013258170,
+     "market_cap_rank": 1,
+     "fully_diluted_valuation": 1235028318246,
+     "total_volume": 69075964521,
+     "high_24h": 59504,
+     "low_24h": 57672,
+     "price_change_24h": 808.94,
+     "price_change_percentage_24h": 1.39234,
+     "market_cap_change_24h": 13240944103,
+     "market_cap_change_percentage_24h": 1.21837,
+     "circulating_supply": 18704250,
+     "total_supply": 21000000,
+     "max_supply": 21000000,
+     "ath": 64805,
+     "ath_change_percentage": -9.24909,
+     "ath_date": "2021-04-14T11:54:46.763Z",
+     "atl": 67.81,
+     "atl_change_percentage": 86630.1867,
+     "atl_date": "2013-07-06T00:00:00.000Z",
+     "roi": null,
+     "last_updated": "2021-05-09T04:06:09.766Z",
+     "sparkline_in_7d": {
+       "price": [
+         57812.96915967891,
+         57504.33531773738,
+       ]
+     },
+     "price_change_percentage_24h_in_currency": 1.3923423473152687
+   }
+ 
  */
+
+
+import Foundation
+
 
 struct CoinModel: Identifiable, Codable {
     let id, symbol, name: String
     let image: String
     let currentPrice: Double
     let marketCap, marketCapRank, fullyDilutedValuation: Double?
-    let totalVolume, high24H: Double?
-    let low24H, priceChange24H, priceChangePercentage24H: Double?
+    let totalVolume, high24H, low24H: Double?
+    let priceChange24H: Double?
+    let priceChangePercentage24H: Double?
     let marketCapChange24H: Double?
     let marketCapChangePercentage24H: Double?
-    let circulatingSupply, totalSupply, maxSupply, ath: Int?
+    let circulatingSupply, totalSupply, maxSupply, ath: Double?
     let athChangePercentage: Double?
     let athDate: String?
     let atl, atlChangePercentage: Double?
@@ -64,13 +106,14 @@ struct CoinModel: Identifiable, Codable {
         return CoinModel(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCap: marketCap, marketCapRank: marketCapRank, fullyDilutedValuation: fullyDilutedValuation, totalVolume: totalVolume, high24H: high24H, low24H: low24H, priceChange24H: priceChange24H, priceChangePercentage24H: priceChangePercentage24H, marketCapChange24H: marketCapChange24H, marketCapChangePercentage24H: marketCapChangePercentage24H, circulatingSupply: circulatingSupply, totalSupply: totalSupply, maxSupply: maxSupply, ath: ath, athChangePercentage: athChangePercentage, athDate: athDate, atl: atl, atlChangePercentage: atlChangePercentage, atlDate: atlDate, lastUpdated: lastUpdated, sparklineIn7D: sparklineIn7D, priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency, currentHoldings: amount)
     }
     
-    var currentHoldingsValues: Double{
+    var currentHoldingsValue: Double {
         return (currentHoldings ?? 0) * currentPrice
     }
     
-    var rank: Int{
+    var rank: Int {
         return Int(marketCapRank ?? 0)
     }
+    
 }
 
 struct SparklineIn7D: Codable {
